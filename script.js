@@ -53,32 +53,22 @@ const lengthsArray = getWordLengths(text);
 console.log(lengthsArray);  
 
 
-
-
-
-
-
 //4
 const universityGroup = {
     groupName: "PA-203",
     students: [],
-
-    // Добавить студента
+    
     addStudent(student) {
         this.students.push(student);
     },
-
-    // Удалить студента по id
     removeStudent(id) {
         this.students = this.students.filter(student => student.id !== id);
     },
 
-    // Получить студента по id
     getStudent(id) {
         return this.students.find(student => student.id === id);
     },
-
-    // Получить средний балл
+    
     getAverageGrade(id) {
         const student = this.getStudent(id);
 
@@ -91,11 +81,8 @@ const universityGroup = {
         for (let grade of student.grade) {
             sum += grade;
         }
-
         return sum / student.grade.length;
     },
-
-    // Добавить оценку
     addGrade(id, grade) {
         const student = this.getStudent(id);
 
@@ -104,7 +91,6 @@ const universityGroup = {
         }
     },
 
-    // Получить лучшего студента
     getTopStudent() {
         let bestStudent = this.students[0];
 
@@ -116,19 +102,14 @@ const universityGroup = {
 
         return bestStudent;
     },
-
-    // Показать всех студентов
+    
     getAllStudents() {
         return this.students;
     },
-
-    // Имя лучшего студента
     getBestStudentName() {
         return this.getTopStudent().name;
     }
 };
-
-
 universityGroup.addStudent({
     id: 1,
     name: "Fidas",

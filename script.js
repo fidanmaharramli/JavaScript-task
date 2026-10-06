@@ -129,24 +129,19 @@ const universityGroup = {
 };
 
 
-// Проверка
-
 universityGroup.addStudent({
     id: 1,
     name: "Fidas",
     age: 17,
     grade: [85, 90]
 });
-
 universityGroup.addStudent({
     id: 2,
     name: "Aslan",
     age: 20,
     grade: [95, 100]
 });
-
 universityGroup.addGrade(1, 95);
-
 console.log(universityGroup.getAllStudents());
 console.log(universityGroup.getStudent(1));
 console.log(universityGroup.getAverageGrade(1));
